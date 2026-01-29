@@ -16,8 +16,13 @@ public class Program {
 		System.out.println(seller);
 		System.out.println("teste numero 2: find by Department: ");
 		Department dep = new Department(2, "Electronics");
-		List<Seller> list = sellerDao.findByDepartment(dep);
-		for(Seller s: list) {
+		List<Seller> list1 = sellerDao.findByDepartment(dep);
+		for(Seller s: list1) {
+			System.out.println(s);
+		}
+		System.out.println("teste numero 3: find all: ");
+		List<Seller> list2 = sellerDao.findAll();
+		for(Seller s: list2) {
 			System.out.println(s);
 		}
 	}
